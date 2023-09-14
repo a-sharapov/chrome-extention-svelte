@@ -1,6 +1,39 @@
 {
   "manifest_version": 3,
-  "name": "Vite Svelte Extension",
+  "default_locale": "en",
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "author": "__MSG_author__",
+  "homepage_url": "https://github.com/a-sharapov/vite-svelte-extension",
+  "icons": {
+    "32": "public/vite.svg",
+    "64": "public/vite.svg",
+    "128": "public/vite.svg"
+  },
+  "content-scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "js": ["content-assets.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "web_accessibile_resources": [
+    {
+      "resources": ["content-assets.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "version": "1.0.0",
-  "action": { "default_popup": "index.html" }
+  "action": { "default_popup": "index.html" },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+J",
+        "mac": "Command+Shift+J"
+      },
+      "description": "Vite Svelte Extension"
+    }
+  }
 }

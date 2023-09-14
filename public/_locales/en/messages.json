@@ -1,0 +1,14 @@
+{
+  "name": {
+    "message": "Vite Svelte Extension",
+    "description": "Extension name"
+  },
+  "description": {
+    "message": "Vite Svelte Extension",
+    "description": "Extension description"
+  },
+  "author": {
+    "message": "Alexander Sharapov <https://github.com/a-sharapov>",
+    "description": "Extension author"
+  }
+}
